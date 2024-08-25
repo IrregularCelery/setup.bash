@@ -7,3 +7,6 @@ export XDG_SESSION_TYPE=x11
 export WINIT_X11_SCALE_FACTOR=1
 
 export PRESERVED_NOTIF_ID=666
+
+# Set default global GTK theme to Adwaita Dark
+export GTK_THEME=Adwaita:dark
