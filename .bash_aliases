@@ -25,18 +25,20 @@ alias lf="ls -l | egrep -v '^d'"  # files only
 alias ld="ls -l | egrep '^d'"     # directories only
 alias ll='ls -Fls'                # long listing format
 
+# Ctrl+L is `ClearLogNotice` in Alacritty
+alias clear='xdotool key Ctrl+l'
 alias cls='clear'
 
 alias mx='chmod a+x'
 
 # Search command line history
-alias h="history | grep "
+alias h='history | grep '
 
 # Search running processes
-alias p="ps aux | grep "
+alias p='ps aux | grep '
 
 # Search files in the current folder
-alias f="find . | grep "
+alias f='find . | grep '
 
 # Show open ports
 alias openports='netstat -nape --inet'
@@ -45,10 +47,10 @@ alias openports='netstat -nape --inet'
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
 # A simple alias for Suckless stuff (e.g. DWM) for building and removing object files
-alias smci="sudo make clean install && rm *.o && rm *.orig"
+alias smci='sudo make clean install && rm *.o && rm *.orig'
 
 # IP address lookup
-alias whatismyip="whatsmyip"
+alias whatismyip='whatsmyip'
 function whatsmyip ()
 {
 	echo -n "Internal IP: "
@@ -58,3 +60,4 @@ function whatsmyip ()
 	echo -n "External IP: "
 	curl -s api.ipify.org
 }
+
